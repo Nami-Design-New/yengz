@@ -242,50 +242,187 @@
             </div>
         </nav>
     </header>
-    <main class="main">
-        <div class="section-head">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="text-wrap" data-aos="fade-up">
-                            <a href="requests.html"> اطلب خدمة علي زوقك /</a>
-                            <h1> إضافة موضوع جديد </h1>
+    <main>
+        <section class="login-section container">
+            <h1 class="text-center">توثيق الحساب</h1>
+            <p class="text-center mt-3 title">مرحبا بك …! ادخل جميع البيانات المطلوبة لإتمام عمليه توثيق الحساب.</p>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-11 col-md-10 col-lg-7 text-center p-0 mb-2">
+                        <div>
+                            <form id="msform">
+                                <!-- progressbar -->
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                        role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                                <br>
+                                <!-- wizard step -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="input-field">
+                                            <label for="phone">
+                                                <i class="ti ti-md ti-device-mobile"></i> رقم الهاتف
+                                            </label>
+                                            <div class="inputs" style="direction: rtl !important;">
+                                                <input type="tel" id="phone" name="phone" placeholder="0XXXXXXXXXX">
+                                                <input type="text" id="phoneField1" name="countryPicker"
+                                                    class="country-picker">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="next" class="next action-button" value="التالي" />
+                                </fieldset>
+                                <!-- wizard step -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h6 class="text-center">من فضلك ادخل الرمز المرسل الي الرقم</h6>
+                                        <p class="text-center mt-2"> +9710123456789 </p>
+                                        <div class="input-field">
+                                            <div class="otp-container">
+                                                <input class="otp-input" type="text" maxlength="1" inputmode="numeric"
+                                                    pattern="[0-9]" required>
+                                                <input class="otp-input" type="text" maxlength="1" inputmode="numeric"
+                                                    pattern="[0-9]" required>
+                                                <input class="otp-input" type="text" maxlength="1" inputmode="numeric"
+                                                    pattern="[0-9]" required>
+                                                <input class="otp-input" type="text" maxlength="1" inputmode="numeric"
+                                                    pattern="[0-9]" required>
+                                                <input class="otp-input" type="text" maxlength="1" inputmode="numeric"
+                                                    pattern="[0-9]" required>
+                                            </div>
+                                        </div>
+                                        <div class="resend-code">
+                                            <a href="#!">اعادة ارسال الرمز</a>
+                                            <div class="timer">
+                                                <span>48</span> :
+                                                <span>00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="next" class="next action-button" value="التالي" />
+                                    <input type="button" name="previous" class="previous action-button-previous"
+                                        value="السابق" />
+                                </fieldset>
+                                <!-- wizard step -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="advice">
+                                            <div class="icon">
+                                                <img src="assets/images/id.svg" alt="icon">
+                                            </div>
+                                            <h6>يرجى ارفاق بطاقة الهوية الوطنية والتأكد من أنها:</h6>
+                                            <ul>
+                                                <li><i class="fa-solid fa-check"></i> مضيئة بشكل جيد وواضحة للقراءة</li>
+                                                <li><i class="fa-solid fa-check"></i> موضوعة داخل الإطار وغير مقصوصة
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>
+                                                <i class="fa-solid fa-id-card"></i> صورة الجهة الأمامية للهوية الوطنية
+                                            </label>
+                                            <label class="img-upload">
+                                                <img src="assets/images/fileup1.svg" alt="icon">
+                                                <input name="front-id-img" id="img-upload-front" accept="image/*"
+                                                    type="file">
+                                            </label>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>
+                                                <i class="fa-solid fa-id-card"></i> صورة الجهة الخلفية للهوية الوطنية
+                                            </label>
+                                            <label class="img-upload">
+                                                <img src="assets/images/fileup1.svg" alt="icon">
+                                                <input name="back-id-img" id="img-upload-back" accept="image/*"
+                                                    type="file">
+                                            </label>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>
+                                                <i class="fa-solid fa-id-card-clip"></i> صورتك مع الهوية الوطنية
+                                            </label>
+                                            <label class="img-upload">
+                                                <img src="assets/images/fileup1.svg" alt="icon">
+                                                <input name="front-id-img" id="img-upload-id-with-user" accept="image/*"
+                                                    type="file">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="next" class="next action-button" value="التالي" />
+                                    <input type="button" name="previous" class="previous action-button-previous"
+                                        value="السابق" />
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="input-field">
+                                            <label for="name">
+                                                <i class="ti ti-md ti-user"></i> الاسم كما هو في الهوية
+                                            </label>
+                                            <input type="text" id="name" name="name"
+                                                placeholder="مثال : محمد خالد محمود">
+                                        </div>
+                                        <div class="input-field">
+                                            <label for="country">
+                                                <i class="ti ti-md ti-flag"></i> الدولة
+                                            </label>
+                                            <input type="text" id="country" name="country">
+                                        </div>
+                                        <div class="input-field">
+                                            <label for="birth">
+                                                <i class="fa-solid fa-calendar"></i> تاريخ الميلاد
+                                            </label>
+                                            <input type="date" id="birth" name="birth" placeholder="15 / 06 / 2023">
+                                        </div>
+                                        <div class="input-field">
+                                            <label for="gender">
+                                                <i class="fa-solid fa-venus-mars"></i> النوع
+                                            </label>
+                                            <div class="inputs">
+                                                <label for="male">
+                                                    <div class="gender">
+                                                        <img src="assets/images/male.svg" alt="male">
+                                                        ذكر
+                                                    </div>
+                                                    <input type="radio" name="gender" id="male">
+                                                </label>
+                                                <label for="female">
+                                                    <div class="gender">
+                                                        <img src="assets/images/female.svg" alt="female">
+                                                        انثى
+                                                    </div>
+                                                    <input type="radio" name="gender" id="female">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="previous" class="previous action-button-previous"
+                                        value="السابق" />
+                                    <input type="button" name="next" class="next action-button" value="تأكيد و انهاء" />
+                                </fieldset>
+                                <!-- wizard finish step -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <img src="assets/images/success.svg" class="fit-image">
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-10 text-center">
+                                                <h5 class="purple-text text-center">تم ارسال بياناتك بنجاح وجاري
+                                                    مراجعتها حالياً , سيتم اخطارك علي البريد الالكتروني المسجل لدينا
+                                                </h5>
+                                                <a href="index.html">الرئيسية <i class="fa-solid fa-angle-left"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <section class="addRequest">
-            <div class="container">
-                <form action="request-details.html">
-                    <div class="input-field mb-4">
-                        <label for="service-name">
-                            عنوان الموضوع
-                        </label>
-                        <input type="text" id="service-name" name="service-name" placeholder="اكتب هنا">
-                    </div>
-                    <div class="input-field mb-4">
-                        <label for="info-for-customer">
-                            محتوى الموضوع
-                        </label>
-                        <textarea name="info-for-customer" id="info-for-customer" placeholder="اكتب هنا"></textarea>
-                    </div>
-                    <div class="input-field  mb-2 flex-row gap-4 ps-3 ">
-                        <input type="checkbox" id="terms" name="" id="" class="bg-transparent p-0 w-auto h-auto">
-                        <label for="terms">
-                            راجعت محتوى الموضوع بدقة وهو لا يخالف <a href="#!"> الشروط والاحكام </a>
-                        </label>
-                    </div>
-                    <div class="input-field  mb-2 flex-row gap-4 ps-3 ">
-                        <input type="checkbox" id="searchInWeb" name="" id="" class="bg-transparent p-0 w-auto h-auto">
-                        <label for="searchInWeb">
-                            بحثت عن الخدمات المعروضة في الموقع قبل كتابة هذا الموضوع
-                        </label>
-                    </div>
-                    <div class="d-flex justify-content-center py-4">
-                        <button type="submit" class="btn btn-success px-5"> نشر </button>
-                    </div>
-                </form>
             </div>
         </section>
     </main>
@@ -443,9 +580,91 @@
             </div>
         </div>
     </footer>
-    <!-- js -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/jquery.ccpicker.min.js"></script>
+    <script src="assets/js/countrySelect.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var current_fs, next_fs, previous_fs; //fieldsets
+            var opacity;
+            var current = 1;
+            var steps = $("fieldset").length;
+            setProgressBar(current);
+            $(".next").click(function () {
+                current_fs = $(this).parent();
+                next_fs = $(this).parent().next();
+                next_fs.show();
+                current_fs.animate({ opacity: 0 }, {
+                    step: function (now) {
+                        opacity = 1 - now;
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        next_fs.css({ 'opacity': opacity });
+                    },
+                    duration: 500
+                });
+                setProgressBar(++current);
+            });
+            $(".previous").click(function () {
+                current_fs = $(this).parent();
+                previous_fs = $(this).parent().prev();
+                $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+                previous_fs.show();
+                current_fs.animate({ opacity: 0 }, {
+                    step: function (now) {
+                        opacity = 1 - now;
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        previous_fs.css({ 'opacity': opacity });
+                    },
+                    duration: 500
+                });
+                setProgressBar(--current);
+            });
+            function setProgressBar(curStep) {
+                var percent = parseFloat(100 / steps) * curStep;
+                percent = percent.toFixed();
+                $(".progress-bar")
+                    .css("width", percent + "%")
+            }
+            $(".submit").click(function () {
+                return false;
+            })
+        });
+    </script>
+    <script>
+        // country code picker
+        $(document).ready(function () {
+            $("#phoneField1").CcPicker();
+            $("#phoneField1").CcPicker("setCountryByCode", "ae");
+        });
+        // country picker
+        $("#country").countrySelect({
+            defaultCountry: "ae",
+            preferredCountries: ['ae', 'dz', 'eg', 'jo', 'sa'],
+        });
+        // otp inputs
+        const otpInputs = document.querySelectorAll('.otp-input');
+        otpInputs.forEach((input, index) => {
+            input.addEventListener('input', (event) => {
+                const currentInput = event.target;
+                const nextInput = otpInputs[index + 1];
+                if (currentInput.value && nextInput) {
+                    nextInput.focus();
+                }
+            });
+            input.addEventListener('keydown', (event) => {
+                if (event.key === 'Backspace' && index > 0) {
+                    otpInputs[index - 1].focus();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -242,50 +242,177 @@
             </div>
         </nav>
     </header>
-    <main class="main">
-        <div class="section-head">
+    <main>
+        <section class="add-service">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="text-wrap" data-aos="fade-up">
-                            <a href="requests.html"> اطلب خدمة علي زوقك /</a>
-                            <h1> إضافة موضوع جديد </h1>
-                        </div>
+                <div class="row justify-content-center">
+                    <div class="col-11 col-sm-9 col-md-7 col-lg-7  text-center p-0 mb-2">
+                        <form id="msform">
+                            <!-- progressbar -->
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                            <br>
+                            <!-- wizard step -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="input-field">
+                                        <label for="service-name">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>عنوان الخدمة</span>
+                                                <i class="info-label fa-light fa-circle-info" data-bs-toggle="tooltip"
+                                                    data-bs-placement="bottom"
+                                                    data-bs-title="اختر عنوانًا مختصرًا وواضحًا يعكس ما ستقدمه بالتحديد في خدمتك، ليتمكن المشترين من العثور عليها عند البحث بكلمات ذات صلة بمجال الخدمة."></i>
+                                            </div>
+                                        </label>
+                                        <input type="text" id="service-name" name="service-name"
+                                            placeholder="مثال : تصميم وبرمجة مواقع">
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="service-main-type">التصنيف</label>
+                                        <div class="selcet-wrap">
+                                            <select class="form-select form-select-lg mb-3" id="service-main-type">
+                                                <option selected>اختر</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="service-secondary-type">التصنيف الفرعي</label>
+                                        <div class="selcet-wrap">
+                                            <select class="form-select form-select-lg mb-3" id="service-secondary-type">
+                                                <option selected>اختر</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="service-description">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>وصف الخدمة</span>
+                                                <i class="info-label fa-light fa-circle-info" data-bs-toggle="tooltip"
+                                                    data-bs-placement="bottom"
+                                                    data-bs-title="اكتب وصفًا مميزًا للخدمة بلغة سليمة خالية من الأخطاء، تشرح خلاله ما سيحصل عليه العميل بالتفصيل عند شراء الخدمة."></i>
+                                            </div>
+                                        </label>
+                                        <textarea name="service-description" placeholder="اكتب هنا"></textarea>
+                                    </div>
+                                </div>
+                                <input type="button" name="next" class="next action-button" value="التالي" />
+                            </fieldset>
+                            <!-- wizard step -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="input-field">
+                                        <label for="info-for-customer">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>معرض الخدمة</span>
+                                                <i class="info-label fa-light fa-circle-info" data-bs-toggle="tooltip"
+                                                    data-bs-placement="bottom"
+                                                    data-bs-title="أضف صورة معبرة عن الخدمة بالإضافة إلى ثلاثة نماذج حصرية على الأقل تعرّف المشتري من خلالها على أسلوبك في العمل ومهاراتك."></i>
+                                            </div>
+                                            <small>القياس: 343x257 بكسل . بنسبة 4:3 . الحجم الأقصى: 5 ميجا. العدد
+                                                المسموح: 10 ملفات.</small>
+                                        </label>
+                                        <label class="img-upload">
+                                            <img src="assets/images/fileup1.svg" alt="icon">
+                                            <input name="front-id-img" id="img-upload-front" accept="image/*"
+                                                type="file">
+                                        </label>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="service-main-type">سعر الخدمة</label>
+                                        <div class="selcet-wrap">
+                                            <select class="form-select form-select-lg mb-3" id="service-main-type">
+                                                <option selected>5.00 $</option>
+                                                <option value="1">10.00 $</option>
+                                                <option value="2">20.00 $</option>
+                                                <option value="3">30.00 $</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="service-name">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>مدة التسليم</span>
+                                                <i class="info-label fa-light fa-circle-info" data-bs-toggle="tooltip"
+                                                    data-bs-placement="bottom"
+                                                    data-bs-title="يحق للمشتري إلغاء الخدمة مباشرة بحال التأخر عن الموعد المحدد."></i>
+                                            </div>
+                                        </label>
+                                        <div class="selcet-wrap">
+                                            <select class="form-select form-select-lg mb-3" id="service-main-type">
+                                                <option selected>اختر</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="button" name="next" class="next action-button" value="التالي" />
+                                <input type="button" name="previous" class="previous action-button-previous"
+                                    value="السابق" />
+                            </fieldset>
+                            <!-- wizard step -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="input-field">
+                                        <label for="info-for-customer">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>تعليمات للمشتري</span>
+                                                <i class="info-label fa-light fa-circle-info" data-bs-toggle="tooltip"
+                                                    data-bs-placement="bottom"
+                                                    data-bs-title="المعلومات التي تحتاجها من المشتري لتنفيذ الخدمة. تظهر هذه المعلومات بعد شراء الخدمة فقط."></i>
+                                            </div>
+                                        </label>
+                                        <textarea name="info-for-customer" id="info-for-customer"
+                                            placeholder="اكتب هنا"></textarea>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="add-more-devlop">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>أضف تطويراً لهذه الخدمة</span>
+                                                <i class="info-label fa-light fa-circle-info" data-bs-toggle="tooltip"
+                                                    data-bs-placement="bottom"
+                                                    data-bs-title="تطويرات الخدمة المقدمة اختيارية فقط ولا يمكن أن تجبر المشتري على طلبها"></i>
+                                            </div>
+                                        </label>
+                                        <input id="addBtn" type="button" value="أضف تطويراً لهذه الخدمة">
+                                    </div>
+                                    <div id="add-cards-container"></div>
+                                </div>
+                                <input type="button" name="next" class="next action-button" value="تأكيد واضافة" />
+                                <input type="button" name="previous" class="previous action-button-previous"
+                                    value="السابق" />
+                            </fieldset>
+                            <!-- wizard finish step -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="row justify-content-center">
+                                        <div class="col-12">
+                                            <img src="assets/images/success.svg" class="fit-image">
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-10 text-center">
+                                            <h5 class="purple-text text-center">
+                                                تم ارسال الخدمة بنجاح وجاري مراجعتها حالياً
+                                            </h5>
+                                            <a href="profile.html">حسابي <i class="fa-solid fa-angle-left"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
-            </div>
-        </div>
-        <section class="addRequest">
-            <div class="container">
-                <form action="request-details.html">
-                    <div class="input-field mb-4">
-                        <label for="service-name">
-                            عنوان الموضوع
-                        </label>
-                        <input type="text" id="service-name" name="service-name" placeholder="اكتب هنا">
-                    </div>
-                    <div class="input-field mb-4">
-                        <label for="info-for-customer">
-                            محتوى الموضوع
-                        </label>
-                        <textarea name="info-for-customer" id="info-for-customer" placeholder="اكتب هنا"></textarea>
-                    </div>
-                    <div class="input-field  mb-2 flex-row gap-4 ps-3 ">
-                        <input type="checkbox" id="terms" name="" id="" class="bg-transparent p-0 w-auto h-auto">
-                        <label for="terms">
-                            راجعت محتوى الموضوع بدقة وهو لا يخالف <a href="#!"> الشروط والاحكام </a>
-                        </label>
-                    </div>
-                    <div class="input-field  mb-2 flex-row gap-4 ps-3 ">
-                        <input type="checkbox" id="searchInWeb" name="" id="" class="bg-transparent p-0 w-auto h-auto">
-                        <label for="searchInWeb">
-                            بحثت عن الخدمات المعروضة في الموقع قبل كتابة هذا الموضوع
-                        </label>
-                    </div>
-                    <div class="d-flex justify-content-center py-4">
-                        <button type="submit" class="btn btn-success px-5"> نشر </button>
-                    </div>
-                </form>
             </div>
         </section>
     </main>
@@ -443,9 +570,123 @@
             </div>
         </div>
     </footer>
-    <!-- js -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/app.js"></script>
+    <script>
+        $(document).ready(function () {
+            var current_fs, next_fs, previous_fs; //fieldsets
+            var opacity;
+            var current = 1;
+            var steps = $("fieldset").length;
+            setProgressBar(current);
+            $(".next").click(function () {
+                current_fs = $(this).parent();
+                next_fs = $(this).parent().next();
+                next_fs.show();
+                current_fs.animate({ opacity: 0 }, {
+                    step: function (now) {
+                        opacity = 1 - now;
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        next_fs.css({ 'opacity': opacity });
+                    },
+                    duration: 500
+                });
+                setProgressBar(++current);
+            });
+            $(".previous").click(function () {
+                current_fs = $(this).parent();
+                previous_fs = $(this).parent().prev();
+                $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+                previous_fs.show();
+                current_fs.animate({ opacity: 0 }, {
+                    step: function (now) {
+                        opacity = 1 - now;
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        previous_fs.css({ 'opacity': opacity });
+                    },
+                    duration: 500
+                });
+                setProgressBar(--current);
+            });
+            function setProgressBar(curStep) {
+                var percent = parseFloat(100 / steps) * curStep;
+                percent = percent.toFixed();
+                $(".progress-bar")
+                    .css("width", percent + "%")
+            }
+            $(".submit").click(function () {
+                return false;
+            })
+        });
+    </script>
+    <script>
+        let count = 0;
+        let addBtn = document.getElementById("addBtn");
+        let deleteBtn = document.getElementById("delet-model")
+        let addingContainer = document.getElementById("add-cards-container");
+        addBtn.addEventListener("click", () => {
+            count++;
+            let container = "";
+            for (let i = 0; i < count; i++) {
+                container += `<div id=${i} class="add-more-model">
+                                            <div class="delete-model">
+                                                <i class="fa-light fa-circle-xmark" data-card-id="${i}"></i>
+                                            </div>
+                                            <div class="input-field m-0">
+                                                <input type="text" id="service-name" name="service-name"
+                                                    placeholder="مثال : تصميم وبرمجة مواقع">
+                                                <div class="selcet-wrap">
+                                                    <select class="form-select form-select-lg" id="service-main-type">
+                                                        <option selected>مقابل 5 دولار اضافة لسعر الخدمة</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                                <div class="d-flex t-select">
+                                                    <div class="selcet-wrap">
+                                                        <select class="form-select form-select-lg"
+                                                            id="service-main-type">
+                                                            <option selected>مقابل 5 دولار اضافة لسعر الخدمة</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="selcet-wrap">
+                                                        <select class="form-select form-select-lg"
+                                                            id="service-main-type">
+                                                            <option selected>يوم واحد</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>`
+            }
+            addingContainer.innerHTML = container;
+            // Attach event listeners to delete icons
+            let deleteIcons = document.querySelectorAll(".delete-model i");
+            deleteIcons.forEach(icon => {
+                icon.addEventListener("click", (event) => {
+                    let cardId = event.target.getAttribute("data-card-id");
+                    let cardToDelete = document.getElementById(cardId);
+                    if (cardToDelete) {
+                        cardToDelete.remove();
+                    }
+                    count--;
+                });
+            });
+        })
+    </script>
 </body>
 
 </html>

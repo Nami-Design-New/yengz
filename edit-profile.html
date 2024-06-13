@@ -242,51 +242,55 @@
             </div>
         </nav>
     </header>
-    <main class="main">
-        <div class="section-head">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="text-wrap" data-aos="fade-up">
-                            <a href="requests.html"> اطلب خدمة علي زوقك /</a>
-                            <h1> إضافة موضوع جديد </h1>
-                        </div>
+    <main>
+        <section class="login-section container">
+            <h1 class="text-center">تعديل الحساب</h1>
+            <form action="" class="container form">
+                <div class="input-field image-change-wrapper">
+                    <div class="img-wrap">
+                        <img id="uploadedImage" src="assets/images/avatar.png" alt="user">
+                    </div>
+                    <div class="d-flex w-100 pe-5 ps-5 justify-content-between align-items-center">
+                        <label for="img">الصورةالشخصية</label>
+                        <label class="upload">
+                            <div class="plus">
+                                <i class="fa-regular fa-plus"></i>
+                            </div>
+                            <input type="file" name="userImage" id="img-upload" accept="image/*">
+                        </label>
                     </div>
                 </div>
-            </div>
-        </div>
-        <section class="addRequest">
-            <div class="container">
-                <form action="request-details.html">
-                    <div class="input-field mb-4">
-                        <label for="service-name">
-                            عنوان الموضوع
-                        </label>
-                        <input type="text" id="service-name" name="service-name" placeholder="اكتب هنا">
+                <div class="input-field">
+                    <label><i class="ti ti-md ti-user"></i>الاسم</label>
+                    <div class="d-flex gap-3">
+                        <input type="text" id="firstName" name="first-name" placeholder="خالد">
+                        <input type="text" id="lastName" name="last-name" placeholder="عوض">
                     </div>
-                    <div class="input-field mb-4">
-                        <label for="info-for-customer">
-                            محتوى الموضوع
-                        </label>
-                        <textarea name="info-for-customer" id="info-for-customer" placeholder="اكتب هنا"></textarea>
+                </div>
+                <div class="input-field">
+                    <label for="email"><i class="ti ti-md ti-mail"></i> البريد الالكتروني</label>
+                    <input type="email" id="email" name="email" placeholder="مثال : mail@mail.com">
+                </div>
+                <div class="input-field">
+                    <label for="about"><i class="fa-regular fa-circle-info"></i> النبذة التعريفية</label>
+                    <textarea name="about" id="about"
+                        placeholder="مطور مواقع , تعلمت لغات HTML5-CSS3-JAVASCRIPT-JQUERY-BOOTSTRAP-PHP-MYSQL-AJAX-JSON-APIلدي أكثر من 50 عميل بتقييم 5 نجوم علي مختلف منصات العمل الحرلدي خبرة في تصميم وتطوير المواقع لاكثر من 5 سنوات وقمت بالعمل علي جميع انواع المشاريع الخاصة بالويب (متاجر الكترونية-مواقع تعريفية-معرض اعمال-مواقع تعليمية-مواقع توظيف) قمنا بالعمل مع مختلف انواع الشركات والهيئات(شركات صغيرة-شركات كبيرة-هيئات حكومية)استطيع تحويل من تصميم الفوتوشوب PSD او XD او Figma الي مواقع تفاعليةفقط القي نظرة علي اعماليولا تتردد في اتصالك بي :)"></textarea>
+                </div>
+                <div class="input-field">
+                    <label for="password"><i class="ti ti-md ti-lock"></i> كلمة المرور</label>
+                    <input type="password" id="password" name="password" placeholder="***********">
+                </div>
+                <div class="question">
+                    <label for="vendor" class="quest">
+                        <img src="assets/images/Vector.svg" alt="">
+                        هل انت بائع ؟
+                    </label>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="vendor">
                     </div>
-                    <div class="input-field  mb-2 flex-row gap-4 ps-3 ">
-                        <input type="checkbox" id="terms" name="" id="" class="bg-transparent p-0 w-auto h-auto">
-                        <label for="terms">
-                            راجعت محتوى الموضوع بدقة وهو لا يخالف <a href="#!"> الشروط والاحكام </a>
-                        </label>
-                    </div>
-                    <div class="input-field  mb-2 flex-row gap-4 ps-3 ">
-                        <input type="checkbox" id="searchInWeb" name="" id="" class="bg-transparent p-0 w-auto h-auto">
-                        <label for="searchInWeb">
-                            بحثت عن الخدمات المعروضة في الموقع قبل كتابة هذا الموضوع
-                        </label>
-                    </div>
-                    <div class="d-flex justify-content-center py-4">
-                        <button type="submit" class="btn btn-success px-5"> نشر </button>
-                    </div>
-                </form>
-            </div>
+                </div>
+                <button type="submit">تأكيد</button>
+            </form>
         </section>
     </main>
     <div class="smallNav">
@@ -443,9 +447,22 @@
             </div>
         </div>
     </footer>
-    <!-- js -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/app.js"></script>
+    <script>
+        //user image change
+        let inputImg = document.getElementById("img-upload");
+        let uploadedImage = document.getElementById("uploadedImage");
+        inputImg.addEventListener("change", () => {
+            if (inputImg.files && inputImg.files[0]) {
+                const reader = new FileReader();
+                reader.onload = e => {
+                    uploadedImage.src = e.target.result;
+                };
+                reader.readAsDataURL(inputImg.files[0]);
+            }
+        });
+    </script>
 </body>
 
 </html>
